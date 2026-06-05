@@ -11,3 +11,4 @@ psycopg2-binary==2.9.12
 requests==2.34.2
 python-dotenv==1.0.0
 python-multipart==0.0.9
+
