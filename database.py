@@ -7,7 +7,8 @@ from sqlalchemy.orm import sessionmaker
 from datetime import datetime
 
 # ── Connection ────────────────────────────────────────────────────
-DATABASE_URL = "postgresql://postgres:medtwin123@localhost:5432/medtwin"
+import os
+DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://postgres:medtwin123@localhost:5432/medtwin")
 
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(bind=engine)
